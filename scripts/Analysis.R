@@ -1,24 +1,5 @@
-# Install necessary packages (only if not already installed)
-packages <- c("xtable", "corrplot", "cluster", "scales", 
-              "ggplot2", "reshape2", "ggrepel", "dplyr", "tidyr")
-
-new_packages <- packages[!(packages %in% installed.packages()[,"Package"])]
-if(length(new_packages)) install.packages(new_packages)
-
-# Load required libraries
-library(scales)
-library(ggplot2)
-library(dplyr)
-library(xtable)
-library(corrplot)
-library(cluster)
-library(reshape2)
-library(ggrepel)
-library(tidyr)
-
-
 # Relative path to the dataset
-data_path <- file.path("data", "project_data.csv")
+data_path <- file.path("data", "NS_cancer.csv")
 
 # Read the dataset
 puffer <- read.csv(data_path)
